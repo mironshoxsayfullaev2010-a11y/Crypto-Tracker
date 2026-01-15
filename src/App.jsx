@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Coin from "./pages/Home/Coin/Coin";
-import Footer from "./components/footer/footer";
+import Footer from "./components/footer/Footer";
 import Features from "./pages/Features/Features";
 
 const App = () => {
