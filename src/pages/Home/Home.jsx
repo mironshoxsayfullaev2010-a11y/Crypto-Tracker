@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Home.css";
-import { CoinContext } from "../../contexts/Coincontext";
+import { CoinContext } from "../../contexts/CoinContext";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     setDisplayCoin(allCoin);
   }, [allCoin]);
-console.log(allCoin)
+  console.log(allCoin);
   return (
     <div className="home">
       <div className="hero">
@@ -43,9 +43,10 @@ console.log(allCoin)
             required
           />
           <datalist id="coinlist">
-            {allCoin && allCoin.map((item, index) => (
-              <option key={index} value={item.name} />
-            ))}
+            {allCoin &&
+              allCoin.map((item, index) => (
+                <option key={index} value={item.name} />
+              ))}
           </datalist>
           <button type="Submit">Search</button>
         </form>
